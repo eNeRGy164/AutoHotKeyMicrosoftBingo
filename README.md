@@ -3,6 +3,7 @@ Inspired by KinectKid333's script he posted at TrueAchievements (http://www.true
 
 Features:
 - CTRL+B starts the autodaubt
+- CTRL+P pauses and resumes the script
 - Checks if a tile is already daubted and skips it
 
 I tested the scripts using Windows 8.1 on Hyper-V and Windows 10 native at a resolution of 1920x1080.
