@@ -1,16 +1,20 @@
-; Tested on Windows 8.1, 1920x1080, 100% Scale
+﻿; Tested on Windows 8.1, 1920x1080, 100% Scale
 
 UseColorCheck := false
 
 ^p::Pause ; Ctrl+P Pause
 ^b::      ; Ctrl+B AutoDaubt
 {
-	SpaceX := 76, SpaceY := 62
+	SpaceX := 50, SpaceY := 40
 
-	DaubtCard(660, 212, SpaceX, SpaceY)
-	DaubtCard(1080, 212, SpaceX, SpaceY)
-	DaubtCard(660, 684, SpaceX, SpaceY)
-	DaubtCard(1080, 684, SpaceX, SpaceY)
+	DaubtCard(640, 200, SpaceX, SpaceY)
+	DaubtCard(920, 200, SpaceX, SpaceY)
+	DaubtCard(1200, 200, SpaceX, SpaceY)
+	DaubtCard(640, 510, SpaceX, SpaceY)
+	DaubtCard(920, 510, SpaceX, SpaceY)
+	DaubtCard(1200, 510, SpaceX, SpaceY)
+	DaubtCard(640, 830, SpaceX, SpaceY)
+	DaubtCard(920, 830, SpaceX, SpaceY)
 
 	Return
 }
