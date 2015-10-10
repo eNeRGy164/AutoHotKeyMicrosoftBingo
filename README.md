@@ -5,7 +5,8 @@ Features:
 - CTRL+B starts the autodaubt
 - Checks if a tile is already daubted and skips it
 
-I tested the script using Windows 8.1 on Hyper-V at a resolution of 1920x1080.
+I tested the scripts using Windows 8.1 on Hyper-V and Windows 10 native at a resolution of 1920x1080.
+For Windows 10 the game must be in full screen mode.
 
 To quickly create your own version: 
 - Make as screenshot of your desired layout (CTRL+PrntScrn)
