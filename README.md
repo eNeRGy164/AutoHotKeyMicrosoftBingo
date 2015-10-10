@@ -13,5 +13,5 @@ To quickly create your own version:
 - Move the cursor just above the center of the number in the top-left corner, in the system bar you will see the X and Y for that card
 - Move the cursor the the same center position above the number to the right. Substruct that of the X you got the first time. This will by your horizontal spacing.
 - Do the same as above, but now for the number below the first one. This will give you the vertical spacing.
-- With these number you can autodaubt the card: `DaubtCard(«Card X», «Card Y», «Spacing X», «Spacing Y»)`
-- Repeat this for all you card in the lay-out.
+- With these numbers you can autodaubt the card: `DaubtCard(«Card X», «Card Y», «Spacing X», «Spacing Y»)`
+- Repeat this for all your cards in the lay-out.
