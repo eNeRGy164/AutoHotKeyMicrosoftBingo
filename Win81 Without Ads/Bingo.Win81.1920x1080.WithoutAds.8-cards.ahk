@@ -1,6 +1,7 @@
 ﻿; Tested on Windows 8.1, 1920x1080, 100% Scale with no ads
 
-UseColorCheck := false
+; Check the color of the tile before clicking it twice, this is slower on empty boards, but will gain speed later on
+UseColorCheck := true
 
 Escape:: ExitApp ; Escape to exit
 ^p::Pause ; Ctrl+P Pause
@@ -79,3 +80,15 @@ Daubt(TileX, TileY)
 		MouseClick, Left, %TileX%, %TileY%, 2, 0
 	}
 }
+
+^d::
+MouseClick, Left, 880, 420, 1, 0
+MouseClick, Left, 1165, 420, 1, 0
+MouseClick, Left, 1445, 420, 1, 0
+
+MouseClick, Left, 880, 740, 1, 0
+MouseClick, Left, 1165, 740, 1, 0
+MouseClick, Left, 1445, 740, 1, 0
+
+MouseClick, Left, 880, 1050, 1, 0
+MouseClick, Left, 1165, 1050, 1, 0

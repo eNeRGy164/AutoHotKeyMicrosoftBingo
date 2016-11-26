@@ -11,12 +11,14 @@ Escape:: ExitApp ; Escape to exit
 	SpaceX := 76, SpaceY := 62
 
 	; First row
-	DaubtCard(780, 210, SpaceX, SpaceY)
-	DaubtCard(1200, 210, SpaceX, SpaceY)
+	DaubtCard(625, 235, SpaceX, SpaceY)
+	DaubtCard(1025, 235, SpaceX, SpaceY)
+	DaubtCard(1400, 235, SpaceX, SpaceY)
 	
 	; Second row
-	DaubtCard(780, 680, SpaceX, SpaceY)
-	DaubtCard(1200, 680, SpaceX, SpaceY)
+	DaubtCard(625, 680, SpaceX, SpaceY)
+	DaubtCard(1025, 680, SpaceX, SpaceY)
+	DaubtCard(1400, 680, SpaceX, SpaceY)
 
 	Return
 }
@@ -77,9 +79,11 @@ Daubt(TileX, TileY)
 
 ^d::
 ; First Row
-MouseClick, Left, 950, 560, 1, 0
-MouseClick, Left, 1350, 560, 1, 0
+MouseClick, Left, 775, 560, 1, 0
+MouseClick, Left, 1150, 560, 1, 0
+MouseClick, Left, 1550, 560, 1, 0
 
 ; Second Row
-MouseClick, Left, 950, 1030, 1, 0
-MouseClick, Left, 1350, 1030, 1, 0
+MouseClick, Left, 775, 1000, 1, 0
+MouseClick, Left, 1150, 1000, 1, 0
+MouseClick, Left, 1550, 1000, 1, 0

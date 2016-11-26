@@ -8,15 +8,22 @@ Escape:: ExitApp ; Escape to exit
 
 ^b::      ; Ctrl+B AutoDaubt
 {
-	SpaceX := 76, SpaceY := 62
+	SpaceX := 50, SpaceY := 40
 
 	; First row
-	DaubtCard(780, 210, SpaceX, SpaceY)
-	DaubtCard(1200, 210, SpaceX, SpaceY)
+	DaubtCard(770, 185, SpaceX, SpaceY)
+	DaubtCard(1050, 185, SpaceX, SpaceY)
+	DaubtCard(1330, 185, SpaceX, SpaceY)
 	
 	; Second row
-	DaubtCard(780, 680, SpaceX, SpaceY)
-	DaubtCard(1200, 680, SpaceX, SpaceY)
+	DaubtCard(770, 500, SpaceX, SpaceY)
+	DaubtCard(1050, 500, SpaceX, SpaceY)
+	DaubtCard(1330, 500, SpaceX, SpaceY)
+	
+	; Third row
+	DaubtCard(770, 815, SpaceX, SpaceY)
+	DaubtCard(1050, 815, SpaceX, SpaceY)
+	DaubtCard(1330, 815, SpaceX, SpaceY)
 
 	Return
 }
@@ -76,10 +83,14 @@ Daubt(TileX, TileY)
 }
 
 ^d::
-; First Row
-MouseClick, Left, 950, 560, 1, 0
-MouseClick, Left, 1350, 560, 1, 0
+MouseClick, Left, 880, 420, 1, 0
+MouseClick, Left, 1165, 420, 1, 0
+MouseClick, Left, 1445, 420, 1, 0
 
-; Second Row
-MouseClick, Left, 950, 1030, 1, 0
-MouseClick, Left, 1350, 1030, 1, 0
+MouseClick, Left, 880, 740, 1, 0
+MouseClick, Left, 1165, 740, 1, 0
+MouseClick, Left, 1445, 740, 1, 0
+
+MouseClick, Left, 880, 1050, 1, 0
+MouseClick, Left, 1165, 1050, 1, 0
+MouseClick, Left, 1445, 1050, 1, 0
