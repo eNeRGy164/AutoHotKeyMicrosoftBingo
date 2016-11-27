@@ -8,22 +8,22 @@ Escape:: ExitApp ; Escape to exit
 
 ^b::      ; Ctrl+B AutoDaubt
 {
-	SpaceX := 50, SpaceY := 40
+	SpaceX := 50, SpaceY := 41
 
 	; First row
-	DaubtCard(770, 185, SpaceX, SpaceY)
-	DaubtCard(1050, 185, SpaceX, SpaceY)
-	DaubtCard(1330, 185, SpaceX, SpaceY)
+	DaubtCard(785, 185, SpaceX, SpaceY)
+	DaubtCard(1065, 185, SpaceX, SpaceY)
+	DaubtCard(1345, 185, SpaceX, SpaceY)
 	
 	; Second row
-	DaubtCard(770, 500, SpaceX, SpaceY)
-	DaubtCard(1050, 500, SpaceX, SpaceY)
-	DaubtCard(1330, 500, SpaceX, SpaceY)
+	DaubtCard(785, 500, SpaceX, SpaceY)
+	DaubtCard(1065, 500, SpaceX, SpaceY)
+	DaubtCard(1345, 500, SpaceX, SpaceY)
 	
 	; Third row
-	DaubtCard(770, 815, SpaceX, SpaceY)
-	DaubtCard(1050, 815, SpaceX, SpaceY)
-	DaubtCard(1330, 815, SpaceX, SpaceY)
+	DaubtCard(785, 815, SpaceX, SpaceY)
+	DaubtCard(1065, 815, SpaceX, SpaceY)
+	DaubtCard(1345, 815, SpaceX, SpaceY)
 
 	Return
 }
