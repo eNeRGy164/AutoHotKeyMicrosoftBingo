@@ -11,12 +11,12 @@ Escape:: ExitApp ; Escape to exit
 	SpaceX := 75, SpaceY := 65
 
 	; First row
-	DaubtCard(805, 210, SpaceX, SpaceY)
-	DaubtCard(1225, 210, SpaceX, SpaceY)
+	DaubtCard(805, 225, SpaceX, SpaceY)
+	DaubtCard(1225, 225, SpaceX, SpaceY)
 	
 	; Second row
-	DaubtCard(805, 680, SpaceX, SpaceY)
-	DaubtCard(1225, 680, SpaceX, SpaceY)
+	DaubtCard(805, 700, SpaceX, SpaceY)
+	DaubtCard(1225, 700, SpaceX, SpaceY)
 
 	Return
 }
@@ -62,9 +62,13 @@ Daubt(TileX, TileY)
 	{
 		PixelGetColor, Color, %TileX%, %TileY%, RGB
 
-		Red := SubStr(Color, 3, 2), Blue := SubStr(Color, 7, 2)
+		Red := SubStr(Color, 3, 1), Green := SubStr(Color, 5, 1), Blue := SubStr(Color, 7, 1)
+		
+		IsRed := (Red == "C" and Green == "2" and Blue == "0")
+		IsGreen := (Red == "6" and Green == "C" and Blue == "2")
+		IsWhite := (Red == "F" and Green == "F" and Blue == "F")
 
-		If (!(Red == "CC" and Blue == "00") and !(Red == "FF" and Blue == "FF"))
+		If (!IsRed and !IsGreen and !IsWhite)
 		{
 			MouseClick, Left, %TileX%, %TileY%, 2, 0
 		}

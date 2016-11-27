@@ -10,20 +10,21 @@ Escape:: ExitApp ; Escape to exit
 {
 	SpaceX := 50, SpaceY := 41
 
+	; Coordinate seeds need to be in the center of the tile for ColorCheck to work correctly.
 	; First row
-	DaubtCard(785, 185, SpaceX, SpaceY)
-	DaubtCard(1065, 185, SpaceX, SpaceY)
-	DaubtCard(1345, 185, SpaceX, SpaceY)
+	DaubtCard(785, 195, SpaceX, SpaceY)
+	DaubtCard(1065, 195, SpaceX, SpaceY)
+	DaubtCard(1345, 195, SpaceX, SpaceY)
 	
 	; Second row
-	DaubtCard(785, 500, SpaceX, SpaceY)
-	DaubtCard(1065, 500, SpaceX, SpaceY)
-	DaubtCard(1345, 500, SpaceX, SpaceY)
+	DaubtCard(785, 510, SpaceX, SpaceY)
+	DaubtCard(1065, 510, SpaceX, SpaceY)
+	DaubtCard(1345, 510, SpaceX, SpaceY)
 	
 	; Third row
-	DaubtCard(785, 815, SpaceX, SpaceY)
-	DaubtCard(1065, 815, SpaceX, SpaceY)
-	DaubtCard(1345, 815, SpaceX, SpaceY)
+	DaubtCard(785, 825, SpaceX, SpaceY)
+	DaubtCard(1065, 825, SpaceX, SpaceY)
+	DaubtCard(1345, 825, SpaceX, SpaceY)
 
 	Return
 }
@@ -69,9 +70,13 @@ Daubt(TileX, TileY)
 	{
 		PixelGetColor, Color, %TileX%, %TileY%, RGB
 
-		Red := SubStr(Color, 3, 2), Blue := SubStr(Color, 7, 2)
+		Red := SubStr(Color, 3, 1), Green := SubStr(Color, 5, 1), Blue := SubStr(Color, 7, 1)
+		
+		IsRed := (Red == "C" and Green == "2" and Blue == "0")
+		IsGreen := (Red == "6" and Green == "C" and Blue == "2")
+		IsWhite := (Red == "F" and Green == "F" and Blue == "F")
 
-		If (!(Red == "CC" and Blue == "00") and !(Red == "FF" and Blue == "FF"))
+		If (!IsRed and !IsGreen and !IsWhite)
 		{
 			MouseClick, Left, %TileX%, %TileY%, 2, 0
 		}
