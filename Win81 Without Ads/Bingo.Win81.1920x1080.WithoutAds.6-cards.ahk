@@ -6,6 +6,28 @@ UseColorCheck := true
 Escape:: ExitApp ; Escape to exit
 ^p::Pause ; Ctrl+P Pause
 
+; Ctrl+O to click on the power up button
+^o::
+{
+	MouseClick, Left, 1845, 300, 1, 0
+	Return
+}
+
+; Ctrl+D to click on the Bingo buttons
+^d::
+{
+	; First Row
+	MouseClick, Left, 775, 560, 1, 0
+	MouseClick, Left, 1150, 560, 1, 0
+	MouseClick, Left, 1550, 560, 1, 0
+
+	; Second Row
+	MouseClick, Left, 775, 1000, 1, 0
+	MouseClick, Left, 1150, 1000, 1, 0
+	MouseClick, Left, 1550, 1000, 1, 0
+	Return
+}
+
 ^b::      ; Ctrl+B AutoDaubt
 {
 	SpaceX := 70, SpaceY := 65
@@ -80,14 +102,3 @@ Daubt(TileX, TileY)
 		MouseClick, Left, %TileX%, %TileY%, 2, 0
 	}
 }
-
-^d::
-; First Row
-MouseClick, Left, 775, 560, 1, 0
-MouseClick, Left, 1150, 560, 1, 0
-MouseClick, Left, 1550, 560, 1, 0
-
-; Second Row
-MouseClick, Left, 775, 1000, 1, 0
-MouseClick, Left, 1150, 1000, 1, 0
-MouseClick, Left, 1550, 1000, 1, 0
