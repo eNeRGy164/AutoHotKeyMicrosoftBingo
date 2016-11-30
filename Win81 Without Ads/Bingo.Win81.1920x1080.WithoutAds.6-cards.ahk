@@ -88,11 +88,13 @@ Daubt(TileX, TileY)
 
 		Red := SubStr(Color, 3, 1), Green := SubStr(Color, 5, 1), Blue := SubStr(Color, 7, 1)
 		
-		IsRed := (Red == "C" and Green == "2" and Blue == "0")
-		IsGreen := (Red == "6" and Green == "C" and Blue == "2")
-		IsWhite := (Red == "F" and Green == "F" and Blue == "F")
+		; IsRed := (Red == "C" and Green == "2" and Blue == "0")
+		; IsGreen := (Red == "6" and Green == "C" and Blue == "2")
+		; IsWhite := (Red == "F" and Green == "F" and Blue == "F")
 
-		If (!IsRed and !IsGreen and !IsWhite)
+		If (!(Red == "C" and Blue == "0") and	; If it is not Red
+			!(Red == "6" and Blue == "2") and	; and not Green
+			!(Red == "F" and Blue == "F"))		; and not White
 		{
 			MouseClick, Left, %TileX%, %TileY%, 2, 0
 		}
